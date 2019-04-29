@@ -1,3 +1,6 @@
+
+[![Build Status](https://dev.azure.com/rishikeshjadhav0981/first-az-pipeline/_apis/build/status/rishikeshjadhav.angular-docker-image?branchName=master)](https://dev.azure.com/rishikeshjadhav0981/first-az-pipeline/_build/latest?definitionId=1&branchName=master)
+
 # Dockerapp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
