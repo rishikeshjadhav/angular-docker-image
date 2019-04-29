@@ -24,7 +24,7 @@ steps:
 
 - task: AzureRmWebAppDeployment@3
   inputs:
-    azureSubscription: '9fc8e581-5d79-4a4c-a258-fccd922215b0'
+    azureSubscription: 'Azure Default Connection'
     WebAppName: 'angular-docker-image'
     Package: '$(System.DefaultWorkingDirectory)'
     GenerateWebConfig: true
