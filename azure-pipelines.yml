@@ -2,6 +2,7 @@
 # Build a Node.js project that uses Angular.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+# Add a task to deploy to azure web app
 
 trigger:
 - master
@@ -20,3 +21,11 @@ steps:
     npm install
     ng build --prod
   displayName: 'npm install and build'
+
+- task: AzureRmWebAppDeployment@3
+  inputs:
+    azureSubscription: '9fc8e581-5d79-4a4c-a258-fccd922215b0'
+    WebAppName: 'angular-docker-image'
+    Package: '$(System.DefaultWorkingDirectory)'
+    GenerateWebConfig: true
+    WebConfigParameters: '-Handler iisnode -NodeStartFile server.js -appType node'
