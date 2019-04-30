@@ -26,6 +26,3 @@ steps:
   inputs:
     ConnectedServiceName: 'Azure Default Connection'
     WebAppName: 'angular-docker-image'
-    Package: '$(System.DefaultWorkingDirectory)'
-    UseWebDeploy: true
-    RemoveAdditionalFilesFlag: true
