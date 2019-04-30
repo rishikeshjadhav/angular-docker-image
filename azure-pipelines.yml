@@ -29,3 +29,4 @@ steps:
     Package: '$(System.DefaultWorkingDirectory)/dist'
     GenerateWebConfig: true
     WebConfigParameters: '-Handler iisnode -NodeStartFile server.js -appType node'
+    RemoveAdditionalFilesFlag: true
