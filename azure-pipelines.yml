@@ -26,7 +26,7 @@ steps:
   inputs:
     azureSubscription: 'Azure Default Connection'
     WebAppName: 'angular-docker-image'
-    Package: '$(System.DefaultWorkingDirectory)/dist/dockerapp'
+    Package: '$(System.DefaultWorkingDirectory)'
     GenerateWebConfig: true
     WebConfigParameters: '-Handler iisnode -NodeStartFile server.js -appType node'
     RemoveAdditionalFilesFlag: true
