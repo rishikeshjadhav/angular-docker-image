@@ -22,9 +22,10 @@ steps:
     ng build --prod
   displayName: 'npm install and build'
 
-- task: AzureRmWebAppDeployment@4
+- task: AzureRmWebAppDeployment@3
   inputs:
-    ConnectedServiceName: 'Azure Default Connection'
+    azureSubscription: 'Azure Default Connection'
     WebAppName: 'angular-docker-image'
     Package: '$(System.DefaultWorkingDirectory)/dist'
-    RemoveAdditionalFilesFlag: true
+    GenerateWebConfig: true
+    WebConfigParameters: '-Handler iisnode -NodeStartFile server.js -appType node'
