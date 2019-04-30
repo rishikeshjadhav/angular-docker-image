@@ -26,5 +26,5 @@ steps:
   inputs:
     ConnectedServiceName: 'Azure Default Connection'
     WebAppName: 'angular-docker-image'
-    Package: '$(System.DefaultWorkingDirectory)'
+    Package: '$(System.DefaultWorkingDirectory)/dist'
     RemoveAdditionalFilesFlag: true
