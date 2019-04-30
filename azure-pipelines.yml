@@ -25,7 +25,7 @@ steps:
 - task: AzureRmWebAppDeployment@3
   inputs:
     azureSubscription: 'Azure Default Connection'
-    WebAppName: 'angular-docker-image'
+    WebAppName: 'ang-doc-1'
     Package: '$(System.DefaultWorkingDirectory)/dist'
     GenerateWebConfig: true
     WebConfigParameters: '-Handler iisnode -NodeStartFile server.js -appType node'
